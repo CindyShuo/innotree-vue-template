@@ -1,6 +1,6 @@
 {
   "name": "innotree-plugin-custom-template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Innotree Custom templates for Vue CLI 3",
   "main": "index.js",
   "scripts": {},
