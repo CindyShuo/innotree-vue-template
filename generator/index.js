@@ -25,6 +25,26 @@ function renderFiles (api, opts) {
 
     api.render('./templates/base')
 
+    // 安装 vuex
+    if (options.vuex) {
+      api.extendPackage({
+        dependencies: {
+          vuex: '^latest'
+        }
+      });
+
+      api.render('./template/vuex');
+    }
+
+    // 安装 element-ui 库
+    if (options.elementUI) {
+      api.extendPackage({
+        devDependencies: {
+          "element-ui": "^latest"
+        }
+      });
+    }
+
     if (opts.router) {
       // 替换掉路由文件
       api.render('./templates/sp')
@@ -39,16 +59,11 @@ function addDependencies (api) {
     dependencies: {
       "axios": "^0.18.0",
     },
-    devDependencies: {
-      // "less": "^3.0.4",
-      // "less-loader": "^4.1.0",
-    }
+    devDependencies: {}
   })
 }
 
 module.exports = (api, opts, rootOpts) => {
-
   addDependencies(api)
-
   renderFiles(api, opts)
 }

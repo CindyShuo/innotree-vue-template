@@ -5,14 +5,16 @@
   "plugins": {
     "@vue/cli-plugin-babel": {},
     "@vue/cli-plugin-eslint": {
-      "config": "prettier",
-      "lintOn": [
-        "save"
-      ]
+      "config": "standard",
+      "lintOn": ["save", "commit"]
     },
     "vue-cli-plugin-custom-tpl": {
       "replaceTemplates": true,
       "router": true
     }
+  },
+  "configs": {
+    "vuex": true,
+    "routerHistoryMode": false
   }
 }

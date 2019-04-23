@@ -7,8 +7,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      // 按需加载
-      component: () => import(/* webpackChunkName: "hello" */ '@/views/Hello.vue')
+      name: 'HomePage',
+      component: () => import(/* webpackChunkName: "homePage" */ '@/views/index/HomePage.vue')
     }
   ]
 })
