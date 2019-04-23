@@ -1,5 +1,6 @@
 function renderFiles (api, opts) {
   if (opts.replaceTemplates) {
+    console.log(opts)
     // https://github.com/vuejs/vue-cli/issues/2470
     api.render(files => {
       console.log(files);
