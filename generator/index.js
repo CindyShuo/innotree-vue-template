@@ -29,7 +29,7 @@ function renderFiles (api, opts) {
     if (opts.vuex) {
       api.extendPackage({
         dependencies: {
-          vuex: '^latest'
+          vuex: '^3.0.1'
         }
       });
 
@@ -40,7 +40,7 @@ function renderFiles (api, opts) {
     if (opts.elementUI) {
       api.extendPackage({
         devDependencies: {
-          "element-ui": "^latest",
+          "element-ui": "^2.7.2",
           "vue-cli-plugin-element": "^1.0.0",
           "babel-plugin-component": "^1.1.1"
         }
