@@ -2,6 +2,7 @@ function renderFiles (api, opts) {
   if (opts.replaceTemplates) {
     // https://github.com/vuejs/vue-cli/issues/2470
     api.render(files => {
+      console.log(files);
       Object.keys(files)
         .filter(name => name.startsWith('src/') > -1)
         .forEach(name => delete files[name])
