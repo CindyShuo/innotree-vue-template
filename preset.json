@@ -1,0 +1,18 @@
+{
+  "useConfigFiles": true,
+  "router": true,
+  "cssPreprocessor": "stylus",
+  "plugins": {
+    "@vue/cli-plugin-babel": {},
+    "@vue/cli-plugin-eslint": {
+      "config": "prettier",
+      "lintOn": [
+        "save"
+      ]
+    },
+    "vue-cli-plugin-custom-tpl": {
+      "replaceTemplates": true,
+      "router": true
+    }
+  }
+}
