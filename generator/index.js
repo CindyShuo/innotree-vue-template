@@ -26,7 +26,7 @@ function renderFiles (api, opts) {
     api.render('./templates/base')
 
     // 安装 vuex
-    if (options.vuex) {
+    if (opts.vuex) {
       api.extendPackage({
         dependencies: {
           vuex: '^latest'
@@ -37,12 +37,15 @@ function renderFiles (api, opts) {
     }
 
     // 安装 element-ui 库
-    if (options.elementUI) {
+    if (opts.elementUI) {
       api.extendPackage({
         devDependencies: {
-          "element-ui": "^latest"
+          "element-ui": "^latest",
+          "vue-cli-plugin-element": "^1.0.0",
+          "babel-plugin-component": "^1.1.1"
         }
       });
+      api.render('./templates/el')
     }
 
     if (opts.router) {
@@ -58,8 +61,12 @@ function addDependencies (api) {
   api.extendPackage({
     dependencies: {
       "axios": "^0.18.0",
+      "babel-polyfill": "^6.26.0",
     },
-    devDependencies: {}
+    devDependencies: {
+      "qs": "^6.5.2",
+      "style-resources-loader": "^1.2.1",
+    }
   })
 }
 
