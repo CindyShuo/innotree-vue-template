@@ -15,6 +15,6 @@
   },
   "configs": {
     "vuex": true,
-    "routerHistoryMode": false
+    "routerHistoryMode": true
   }
 }
